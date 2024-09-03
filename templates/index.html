@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<title>{{title}}</title>
+</head>
+<body>
+  <h2>{{head}}</h2>
+
+
+  <form method="post">
+    {% csrf_token %}
+    <label >Username:</label><br>
+    <input type="text" id="username" name="name"><br><br>
+    
+    <label >Email:</label><br>
+    <input type="text" id="password" name="email"><br><br>
+
+    <label >Phone:</label><br>
+    <input type="text"  name="ph"><br><br>
+    
+    <input type="submit" value="Submit">
+    <img src="{% static 'Picture1.jpg' %}">
+  </form>
+</body> 
+</html>
